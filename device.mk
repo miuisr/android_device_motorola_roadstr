@@ -12,7 +12,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 
 # Virtual A/B OTA configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression_with_xor.mk)
 
 # GSI
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
@@ -91,10 +90,10 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 
 # API
-PRODUCT_SHIPPING_API_LEVEL := 34
-PRODUCT_TARGET_VNDK_VERSION := 34
-BOARD_SHIPPING_API_LEVEL := 34
-SHIPPING_API_LEVEL := 34
+PRODUCT_SHIPPING_API_LEVEL := 28
+PRODUCT_TARGET_VNDK_VERSION := 28
+BOARD_SHIPPING_API_LEVEL := 28
+SHIPPING_API_LEVEL := 28
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
