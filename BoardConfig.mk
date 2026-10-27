@@ -162,7 +162,7 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3 # disable hashtree/verification
 
 # Crypto
-FIXED_DECRYPT := false
+FIXED_DECRYPT := true
 TW_INCLUDE_CRYPTO := $(FIXED_DECRYPT)
 TW_INCLUDE_CRYPTO_FBE := $(FIXED_DECRYPT)
 TW_INCLUDE_FBE_METADATA_DECRYPT := $(FIXED_DECRYPT)
@@ -172,7 +172,7 @@ TW_USE_FSCRYPT_POLICY := 2
 # Encryption
 BOARD_USES_METADATA_PARTITION := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
-PLATFORM_VERSION := 99.87.36
+PLATFORM_VERSION := 99
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
@@ -183,7 +183,7 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/recovery/root/vendor/etc/vintf/manifest.x
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
-PLATFORM_VERSION := 16.1.0
+PLATFORM_VERSION := 99
 
 # Sepolicy
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
@@ -195,7 +195,7 @@ TW_EXTERNAL_STORAGE_PATH   := "/usb_otg"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb_otg"
 
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
-TW_LOAD_VENDOR_MODULES := "panel_event_notifier.ko goodix_brl_mmi.ko touchscreen_mmi.ko focaltech_v3_4.ko adsp_loader_dlkm.ko rproc_qcom_common.ko q6_dlkm.ko qcom_q6v5.ko qcom_q6v5_pas.ko qcom_sysmon.ko"
+TW_LOAD_VENDOR_MODULES := "panel_event_notifier.ko aw_haptic_hv_v1_5.ko goodix_brl_mmi.ko touchscreen_mmi.ko focaltech_v3_4.ko adsp_loader_dlkm.ko rproc_qcom_common.ko q6_dlkm.ko qcom_q6v5.ko qcom_q6v5_pas.ko qcom_sysmon.ko"
 TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
-TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone17/temp"
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone2/temp"
 TW_BATTERY_SYSFS_WAIT_SECONDS := 6
